@@ -4,11 +4,11 @@ import HomePage from "../app/home/Home";
 
 export default function Home() {
   return (
-    <>  
-     <HomePage />
-      {/* <h1>Business Website</h1> */}
-      
-   
+    <>
+
+      <Navbar />
+      <HomePage />
+
     </>
   );
 }
