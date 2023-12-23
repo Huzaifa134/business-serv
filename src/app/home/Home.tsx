@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import header from "../../../public/header.jpg";
-const HomePage = () => {
+const Home = () => {
   return (
     <div>
       {/* <h1>Home component</h1> */}
@@ -32,6 +32,7 @@ const HomePage = () => {
           />
         </div>
       </div>
+      <About />
     </div>
   );
 };
