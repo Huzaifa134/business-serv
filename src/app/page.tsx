@@ -5,9 +5,8 @@ import HomePage from "../app/home/Home";
 export default function Home() {
   return (
     <>
-      {/* <h1>Business Website</h1> */}
-      <Navbar />
       <HomePage />
+
     </>
   );
 }
