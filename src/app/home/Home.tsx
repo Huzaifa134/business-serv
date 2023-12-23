@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import header from "../../../public/header.jpg";
 import About from "../about/About";
+import Services from "./Services";
 const Home = () => {
   return (
     <div>
@@ -29,6 +30,9 @@ const Home = () => {
         </div>
       </div>
       <About />
+      <div>
+        <Services />
+      </div>
     </div>
   );
 };
