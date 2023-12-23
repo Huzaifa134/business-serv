@@ -15,10 +15,16 @@ const Navbar = () => {
   return (
     <>
       {/* Header */}
-      <header className="flex justify-between px-32 py-4 bg-gray-100 items-center">
+      <header className="flex justify-between px-32 py-4 bg-transparent items-center">
         {/* Left Side */}
         <div>
-          <h1 className="text-3xl font-bold text-gray-600">Business</h1>
+          <Image 
+          src="/Logo.png"
+          alt="Logo"
+          width={120}
+          height={100}
+           />
+          {/* <h1 className="text-3xl font-bold text-gray-600">Business</h1> */}
         </div>
 
         {/* Right Side */}
