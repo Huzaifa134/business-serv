@@ -3,7 +3,8 @@ import Image from "next/image";
 import about from "../../../public/about.png";
 const About = () => {
   return (
-    <div className="flex items-center w-full justify-center md:my-10 sm:my-10 max-[717px]:my-10 lg:gap-x-60 md:gap-x-10 flex-row md:px-20 max-[717px]:gap-x-5 max-[717px]:flex-col ">
+    <div className= " bg-slate-100  mt-0" >
+    <div className="flex items-center w-full justify-center md:my-0 sm:my-10 max-[717px]:my-10 lg:gap-x-60 md:gap-x-10 flex-row md:px-20 max-[717px]:gap-x-5 max-[717px]:flex-col" >
       <div className="relative  lg:w-[400px] lg:h-[400px] md:w-[300px] md:h-[300px] max-[717px]:w-[300px] max-[717px]:h-[300px]">
         <Image src={about} alt="Header Image" />
       </div>
@@ -23,6 +24,7 @@ const About = () => {
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 };
