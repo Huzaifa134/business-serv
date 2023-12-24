@@ -23,7 +23,7 @@ export default function Example() {
           <body class="h-full">
           ```
         */}
-      <div className="flex w-[500px] mx-auto min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-white border-2 border-blue-700 rounded-xl">
+      <div className="max-[640px]:rounded-none flex lg:w-[500px] md:w-[450px] sm:w-[400px] mx-auto min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-white border-2 border-blue-700 rounded-xl ">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 className="mt-0 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Get Quote
