@@ -6,7 +6,7 @@ const posts = [
   {
     id: 1,
     title: "ACCOUNTIN",
-    href: "#",
+    href: "/services",
     description:
       "Review accountant/s/bookeeper/s entries to ensure accuracy of the General Ledger Perform review of account on computer spreadsheets and/or database Manage accounting operations, reporting and reconciliations.",
     author: {
@@ -16,32 +16,21 @@ const posts = [
   {
     id: 2,
     title: "TAX AND AUDIT",
-    href: "#",
+    href: "/services",
     description:
       "Complete/process monthly, quarterly and annual bank reconciliation and financial reports to verify practice of due diligence Perform field audit on wide variety of clientele Complete regulatory, pre-implementation and risk-based audits to achieve business objective.",
-    date: "Mar 16, 2020",
-    datetime: "2020-03-16",
-    category: { title: "Marketing", href: "#" },
     author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      href: "#",
       imageUrl: tax,
     },
   },
   {
     id: 3,
-    title: "FINANCIAL ANALYSIS",
+    title: "/services",
     href: "#",
     description:
       "Thorough review of financial statements and tax audits Prepare monthly and annual expense forecasts, including any unecessary recommended action required to manage costs to achieve budget Reduce time and costs and increased efficiency by introducing new accounting procedures as required",
-    date: "Mar 16, 2020",
-    datetime: "2020-03-16",
     category: { title: "Marketing", href: "#" },
     author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
-      href: "#",
       imageUrl: graph,
     },
   },
@@ -56,7 +45,7 @@ export default function Example() {
           Our Services
         </h1>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16   pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {posts.map((post) => (
+          {posts.slice(0, 3).map((post) => (
             <article
               key={post.id}
               className="flex max-w-xl flex-col items-start justify-between border-[#27978c] border-2 rounded-md bg-white px-5"

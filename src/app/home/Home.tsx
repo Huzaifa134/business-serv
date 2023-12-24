@@ -3,6 +3,7 @@ import Image from "next/image";
 import header from "../../../public/header.jpg";
 import About from "../about/About";
 import Services from "./Services";
+import Btn from "../Btn";
 const Home = () => {
   return (
     <div>
@@ -14,10 +15,8 @@ const Home = () => {
           <p className="lg:text-base md:text-sm sm:text-[15px] max-[717px]:text-center">
             2025 Grow Your e-Commerce Conference
           </p>
-          <div>
-            <button className="bg-sky-500 hover:bg-sky-700 py-3 px-5 rounded-xl my-10 text-[#feffff] ">
-              Save changes
-            </button>
+          <div className="my-10">
+            <Btn text={"Learn More"} />
           </div>
         </div>
         <div className="relative lg:w-[600px] lg:h-[500px] md:w-[500px] md:h-[500px] max-[717px]:w-[500px] max-[717px]:h-[300px]">

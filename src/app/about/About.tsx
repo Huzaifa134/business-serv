@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import about from "../../../public/about.png";
+import Btn from "../Btn";
 const About = () => {
   return (
     <div className="flex items-center w-full justify-center md:my-10 sm:my-10 max-[717px]:my-10 lg:gap-x-60 md:gap-x-10 flex-row md:px-20 max-[717px]:gap-x-5 max-[717px]:flex-col ">
@@ -17,10 +18,8 @@ const About = () => {
           aliquam, maxime autem? Vitae unde necessitatibus vero nobis minima
           officiis, iure quisquam
         </p>
-        <div>
-          <button className="bg-sky-500 hover:bg-sky-700 py-3 px-5 rounded-xl my-10 text-[#feffff] ">
-            Learn More
-          </button>
+        <div className="my-10">
+          <Btn text={"Learn More"} />
         </div>
       </div>
     </div>
