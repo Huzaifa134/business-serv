@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import about from "../../../public/about.png";
+import Btn from "../Btn";
 const About = () => {
   return (
     <div className= " bg-slate-100  mt-0" >
@@ -18,10 +19,8 @@ const About = () => {
           aliquam, maxime autem? Vitae unde necessitatibus vero nobis minima
           officiis, iure quisquam
         </p>
-        <div className="  ">
-          <button className="bg-sky-500 hover:bg-sky-700 py-3 px-5 rounded-xl my-10 text-[#feffff] ">
-            Learn More
-          </button>
+        <div className="my-10">
+          <Btn text={"Learn More"} />
         </div>
       </div>
     </div>

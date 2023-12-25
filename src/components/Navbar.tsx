@@ -18,12 +18,7 @@ const Navbar = () => {
       <header className="flex justify-between px-32 py-4 bg-transparent items-center">
         {/* Left Side */}
         <div>
-          <Image 
-          src="/Logo.png"
-          alt="Logo"
-          width={120}
-          height={100}
-           />
+          <Image src="/Logo.png" alt="Logo" width={120} height={100} />
           {/* <h1 className="text-3xl font-bold text-gray-600">Business</h1> */}
         </div>
 
@@ -34,10 +29,10 @@ const Navbar = () => {
               <Link href={"/"}>Home </Link>
             </li>
             <li>
-              <Link href={"/"}>Services</Link>
+              <Link href={"/services"}>Services</Link>
             </li>
             <li>
-              <Link href={"/"}>Contact</Link>
+              <Link href={"/Form"}>Contact</Link>
             </li>
             <li>
               <Link href={"/"}>Buy Now</Link>

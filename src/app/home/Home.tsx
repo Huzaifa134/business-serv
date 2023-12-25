@@ -3,6 +3,8 @@ import Image from "next/image";
 import header from "../../../public/header.jpg";
 import Background from "../../../Background.png"
 import About from "../about/About";
+import Services from "./Services";
+import Btn from "../Btn";
 const Home = () => {
   
   return (
@@ -41,6 +43,9 @@ const Home = () => {
       </div>
   
       <About />
+      <div>
+        <Services />
+      </div>
     </div>
   
       
