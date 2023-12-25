@@ -29,10 +29,10 @@ const Home = () => {
             Grow your business
           </p>
           <div className=" flex flex-col items-center  ">
-            <button className="bg-sky-500 hover:bg-sky-700 py-3 px-5 rounded-xl my-10 text-[#feffff] ">
+          <button className="bg-sky-500 hover:bg-sky-700 py-3 px-5 rounded-xl my-10 text-[#feffff] ">
               Save changes
-            </button>
-          </div>
+            </button>     
+                 </div>
         </div>
         </div>
         {/* <div
