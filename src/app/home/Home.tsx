@@ -10,8 +10,11 @@ const Home = () => {
     <div className="bg-scroll flex justify-center items-end h-screen mb-0 "
     style={
       {
-        backgroundImage:`url('/Background.png')`,
-        height:"700px",
+        backgroundImage:`url('/hero.png')`,
+        height:"600px",
+        backgroundPosition:"center",
+        backgroundSize:"cover",
+
       }
     }> 
      {/* <h1>Home component</h1> */}
