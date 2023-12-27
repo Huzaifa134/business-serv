@@ -48,16 +48,17 @@ export default function Example() {
           {posts.slice(0, 3).map((post) => (
             <article
               key={post.id}
-              className="flex max-w-xl flex-col items-start justify-between border-[#27978c] border-2 rounded-md bg-white px-5"
+              className="flex max-w-xl flex-col items-start justify-between shadow-xl border-2 rounded-md bg-white px-5"
             >
-              <div className="relative mt-8 flex w-full items-center gap-x-4 justify-center">
-                <Image
+              <div className="relative mt-8 flex w-full items-center rounded-full justify-center border-[#22D6fD] h-48">
+                 <Image
                   src={post.author.imageUrl}
                   alt="image"
-                  className=" rounded-full bg-gray-50"
-                  height={100}
-                  width={100}
-                />
+                  className="h-full"
+                
+                  // height={100}
+                  // width={100}
+                /> 
               </div>
 
               <div className="group relative">
