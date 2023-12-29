@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <>
       {/* Header */}
-      <header className="flex justify-between px-32 py-4 bg-transparent items-center">
+      <header className="flex justify-between px-32 py-4 bg- items-center bg-[#22D6FD]">
         {/* Left Side */}
         <div>
           <Image src="/Logo.png" alt="Logo" width={120} height={100} />
