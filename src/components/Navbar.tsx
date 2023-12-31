@@ -18,7 +18,7 @@ const Navbar = () => {
       <header className="flex justify-between px-32 py-4 bg- items-center bg-[#22D6FD]">
         {/* Left Side */}
         <div>
-          <Image src="/Logo.png" alt="Logo" width={120} height={100} />
+          <Image src="/HeaderAnime.gif" alt="Logo" width={200} height={200} />
           {/* <h1 className="text-3xl font-bold text-gray-600">Business</h1> */}
         </div>
 
