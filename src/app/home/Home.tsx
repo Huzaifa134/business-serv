@@ -18,8 +18,8 @@ const Home = () => {
     <div className="bg-scroll flex justify-center items-center h-screen mb-0 "
     style={
       {
-        backgroundImage:`url('/Hero.png')`,
-        height:"600px",
+        backgroundImage:`url('/Hero.jpg')`,
+        height:"800px",
         backgroundPosition:"center",
         backgroundSize:"cover",
 
@@ -27,20 +27,21 @@ const Home = () => {
     }> 
      {/* <h1>Home component</h1> */}
       <div className="flex items-center mt-45 w-full justify-center lg:gap-x-60  pt-100 md:gap-x-10 flex-row md:px-20 max-[717px]:gap-x-5 max-[717px]:flex-col ">
-        <div className="mt-45 max-[717px]:my-5 max-[717px]:flex max-[717px]:flex-col max-[717px]:justify-center">
+        <div className="mt-45 max-[717px]:my-5 max-[717px]:flex max-[717px]:flex-col max-[717px]:justify-center mx-11">
           {/* <h1 className="font-bold lg:text-5xl md:text-3xl max-[717px]:text-[60px] max-[717px]:tracking-widest max-[717px]:text-center text-white ">
           Welcome to Pacific Financial Hub 
           </h1>
           <p className="lg:text-base text-center md:text-sm sm:text-[15px] max-[717px]:text-center">
           
           
+
           </p> */}
           <TypeAnimation
       sequence={[
         // Same substring at the start will only be typed out once, initially
-        'Welcome to Pacific Financial Hub ',
+        'Welcome to Pacific Financial Hub ! ',
         3000, // wait 1s before replacing "Mice" with "Hamsters"
-        'We are Business Management and Accounting Consultants',
+        'We are Business Management & Accounting Consultants',
         1000,
         'We can help your business grow ',
         1000,
@@ -58,7 +59,7 @@ const Home = () => {
       ]}
       wrapper="span"
       speed={50}
-      style={{ fontSize: '2.5rem', display: 'inline-block', color: 'white', fontFamily:"monospace", fontStyle:"normal"}}
+      style={{ fontSize: '3rem', display: 'inline-block', color: 'white', fontFamily:"monospace", fontStyle:"normal", alignItems:'center'}}
       repeat={Infinity}
     />
          
