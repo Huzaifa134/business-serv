@@ -55,7 +55,6 @@ export default function Example() {
                   src={post.author.imageUrl}
                   alt="image"
                   className="fill-teal-900"
-                
                 height={70}
                 width={70}
                 /> 
