@@ -15,10 +15,10 @@ const Navbar = () => {
   return (
     <>
       {/* Header */}
-      <header className="flex justify-between px-32 py-4 bg- items-center bg-[#22D6FD]">
+      <header className="flex justify-between px-32 pt-4 bg- items-center bg-[#22D6FD] lg:h-30">
         {/* Left Side */}
         <div>
-          <Image src="/HeaderAnime.gif" alt="Logo" width={200} height={200} />
+          <Image src="/HeroAnime.gif" alt="Logo" width={200} height={100} />
           {/* <h1 className="text-3xl font-bold text-gray-600">Business</h1> */}
         </div>
 
@@ -26,16 +26,16 @@ const Navbar = () => {
         <nav>
           <ul className="text-lg font-medium hidden md:flex gap-x-4 text-gray-600">
             <li>
-              <Link href={"/"}>Home </Link>
+              <Link href={"/"}> Home </Link>
             </li>
             <li>
-              <Link href={"/services"}>Services</Link>
+              <Link href={"/services"}> Services </Link>
             </li>
             <li>
-              <Link href={"/Form"}>Contact</Link>
+              <Link href={"/Form"}> Contact Us </Link>
             </li>
             <li>
-              <Link href={"/"}>Buy Now</Link>
+              <Link href={"/"}> Buy Now  </Link>
             </li>
           </ul>
           <div className="flex md:hidden">
