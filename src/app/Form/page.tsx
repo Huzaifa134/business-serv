@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import supabase from "@/config/supabaseClient";
 import { useState } from "react";
 export default function Example() {
