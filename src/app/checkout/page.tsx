@@ -5,8 +5,13 @@ import {
 } from "@stripe/stripe-js";
 import React from "react";
 
+// Define the correct type for lineItems
 interface CheckoutProps {
-  lineItems: any[]; // Replace 'any[]' with the actual type of your lineItems
+  lineItems: {
+    // Specify the actual properties of each line item, e.g.:
+    price: string;
+    quantity: number;
+  }[];
 }
 
 export default async function checkout({
