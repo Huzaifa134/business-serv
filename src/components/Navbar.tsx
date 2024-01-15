@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,6 +11,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+
+import { checkout } from "@/app/checkout/page";
 
 const Navbar = () => {
   return (
@@ -35,7 +38,22 @@ const Navbar = () => {
               <Link href={"/Form"}> Contact Us </Link>
             </li>
             <li>
-              <Link href={"/"}> Buy Now  </Link>
+              <Link href={"/"}>
+                <button
+                  onClick={() => {
+                    checkout({
+                      lineItems: [
+                        {
+                          price: "price_1OYuklIuBZT1f6AcnxeEHZP8",
+                          quantity: 1,
+                        },
+                      ],
+                    });
+                  }}
+                >
+                  Buy Now
+                </button>
+              </Link>
             </li>
           </ul>
           <div className="flex md:hidden">
@@ -50,13 +68,28 @@ const Navbar = () => {
                       <Link href={"/"}>Home </Link>
                     </li>
                     <li className="py-3">
-                      <Link href={"/"}>Services</Link>
+                      <Link href={"/services"}>Services</Link>
                     </li>
                     <li className="py-3">
-                      <Link href={"/"}>Contact</Link>
+                      <Link href={"/Form"}>Contact</Link>
                     </li>
                     <li className="py-3">
-                      <Link href={"/"}>Buy Now</Link>
+                      <Link href={"/"}>
+                        <button
+                          onClick={() => {
+                            checkout({
+                              lineItems: [
+                                {
+                                  price: "price_1OYuklIuBZT1f6AcnxeEHZP8",
+                                  quantity: 1,
+                                },
+                              ],
+                            });
+                          }}
+                        >
+                          Buy Now
+                        </button>
+                      </Link>
                     </li>
                   </ul>
                 </SheetHeader>
