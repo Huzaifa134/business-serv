@@ -14,9 +14,7 @@ interface CheckoutProps {
   }[];
 }
 
-export default async function checkout({
-  lineItems,
-}: CheckoutProps): Promise<void> {
+export async function checkout({ lineItems }: CheckoutProps): Promise<void> {
   let stripePromise: Promise<Stripe | null> | null = null;
 
   const getStripe = (): Promise<Stripe | null> => {

@@ -12,7 +12,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import checkout from "@/app/checkout/page";
+import { checkout } from "@/app/checkout/page";
 
 const Navbar = () => {
   return (
