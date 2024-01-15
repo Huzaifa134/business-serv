@@ -9,7 +9,9 @@ interface CheckoutProps {
   lineItems: any[]; // Replace 'any[]' with the actual type of your lineItems
 }
 
-export async function checkout({ lineItems }: CheckoutProps): Promise<void> {
+export default async function checkout({
+  lineItems,
+}: CheckoutProps): Promise<void> {
   let stripePromise: Promise<Stripe | null> | null = null;
 
   const getStripe = (): Promise<Stripe | null> => {
