@@ -1,6 +1,7 @@
 'use client'
 import React from "react";
 import Image from "next/image";
+import {GrFacebookOption, GrTwitter, GrLinkedinOption} from 'react-icons/gr'
 import Link from "next/link";
 import { 
     FacebookShareButton, 
@@ -27,19 +28,13 @@ const Footer= () => {
               {/* <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
                Pacific Financial Hub  */}
               {/* </h5> */}
-              <div className="mt-6 lg:mb-0 mb-6 mx-6 flex flex-row space-x-4">
-            
-                <FacebookShareButton  url={'http://localhost:3000'} > 
-                 <FacebookIcon size={40} round /> </FacebookShareButton>
-                 
-                 <LinkedinShareButton   url={'http://localhost:3000'} > 
-                     <LinkedinIcon size={40} round /> 
-                 </LinkedinShareButton> 
-                 <WhatsappShareButton 
-       
-        url={'http://localhost:3000'} > 
-        <WhatsappIcon size={40} round /> 
-      </WhatsappShareButton> 
+              <div className="mt-6 lg:mb-0 mb-6 mx-1 flex flex-row space-x-4">
+              <div className='flex flex-wrap gap-4 mb-6 sm:mx'>
+            <div className=' h-14 w-14 py-3 px-3  rounded-full hover:bg-white'><GrTwitter size={26} /></div>
+            <div className=' h-14 w-14 py-3 px-3  rounded-full hover:bg-white'><GrFacebookOption size={26} /></div>
+            <div className='h-14 w-14 py-3 px-3  rounded-full hover:bg-white'><GrLinkedinOption size={26} /></div>
+          </div>
+                
               </div>
             </div>
             <div className="w-full lg:w-6/12 px-4">
