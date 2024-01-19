@@ -1,5 +1,5 @@
-"use client";
-import React from "react";
+"use client"
+import React, { Suspense } from "react";
 import Image from "next/image";
 import header from "../../../public/header.jpg";
 import Background from "../../../Background.png";
@@ -9,12 +9,22 @@ import Btn from "../Btn";
 import GooeyButton from "@/components/gooeybutton";
 import Typewriter from "typewriter-effect";
 import { TypeAnimation } from "react-type-animation";
+import { lusitana } from '@/components/ui/fonts';
+import Servicesection from './Services';
+import {useRouter} from 'next/router';
+import mockRouter from 'next-router-mock';
+import Link from 'next/link';
 
-const Home = () => {
+export default function  Homepage(){
+
+ 
+
   return (
      
  <div>
-    <div className="bg-scroll flex justify-center items-center h-screen mb-0 "
+
+    <div className={`${lusitana.className}bg-scroll flex justify-center items-center h-screen mb-0 `}
+
     style={
       {
         backgroundImage:`url('/hero.jpg')`,
@@ -28,6 +38,7 @@ const Home = () => {
       <div className="flex items-center mt-45 w-full justify-center lg:gap-x-60  pt-100 md:gap-x-10 flex-row md:px-20 max-[717px]:gap-x-5 max-[717px]:flex-col ">
         <div className="mt-45 max-[717px]:my-5 max-[717px]:flex max-[717px]:flex-col max-[717px]:justify-center mx-11"> 
           <div className=" flex flex-col items-center  ">
+
             <TypeAnimation
               sequence={[
                 // Same substring at the start will only be typed out once, initially
@@ -57,12 +68,13 @@ const Home = () => {
                 fontFamily: "monospace",
                 fontStyle: "normal",
               }}
+
               repeat={Infinity}
             />
 
-            
+            <Link href="/Form">
               <GooeyButton />
-            
+            </Link>
             </div>
             
           </div>
@@ -70,23 +82,19 @@ const Home = () => {
         </div>
         <About />
         <div>
-          <Services />
+          <Suspense>
+            <Servicesection/>
+          </Suspense>
         </div>
-      </div>
+
+
+    
      
     
-  )
-            }
-            
-        {/* <div
-          className="bg-cover bg-center w-[500px] h-[500px]"
-          style={{ backgroundImage: `url(${header})` }}
-        ></div> */}
-    
   
+       
     
-  
+  </div>
+   ) 
+  }
 
-
-
-export default Home
