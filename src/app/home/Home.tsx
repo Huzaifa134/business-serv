@@ -11,8 +11,13 @@ import Typewriter from "typewriter-effect";
 import { TypeAnimation } from "react-type-animation";
 import { lusitana } from '@/components/ui/fonts';
 import Servicesection from './Services';
+import {useRouter} from 'next/router';
+import mockRouter from 'next-router-mock';
+import Link from 'next/link';
+
+export default function  Homepage(){
+
  
-const  Homepage = () => {
 
   return (
      
@@ -67,9 +72,9 @@ const  Homepage = () => {
               repeat={Infinity}
             />
 
-            
+            <Link href="/Form">
               <GooeyButton />
-            
+            </Link>
             </div>
             
           </div>
@@ -87,14 +92,9 @@ const  Homepage = () => {
      
     
   
-            
-        {/* <div
-          className="bg-cover bg-center w-[500px] h-[500px]"
-          style={{ backgroundImage: `url(${header})` }}
-        ></div> */}
+       
     
   </div>
    ) 
   }
 
-export default Homepage;

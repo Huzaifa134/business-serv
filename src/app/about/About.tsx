@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import about from "../../../public/about.png";
+import Link from "next/link";
 import Btn from "../Btn";
 const About = () => {
   return (
@@ -17,7 +18,9 @@ const About = () => {
         Our company is led by a team of Certified Public Accountants with nearly three decades of experience in key areas such as Accounting, Audit, Tax, and Management Consultancy. Learn more about our professional partnership and how it can benefit your business.
         </p>
         <div className="my-10">
-          <Btn text={"Learn More"} />
+          <Link href="/services">
+          <Btn  text={"Learn More"}/>
+        </Link>
         </div>
       </div>
     </div>
