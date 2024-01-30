@@ -1,4 +1,5 @@
 'use client'
+import { DatePickerWithRange } from "@/components/datapicker";
 import supabase from "@/config/supabaseClient";
 import { useState } from "react";
 export default function Example() {
@@ -11,6 +12,7 @@ export default function Example() {
   const [Service, setService] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [Date,setDate] = useState("");
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     // setError("");
@@ -21,11 +23,22 @@ export default function Example() {
       !Bussiness_Name ||
       !Email ||
       !comment ||
-      !Service
+      !Service ||
+      !Date
     ) {
       setError("Please fill all the fields");
       setSuccess("");
       return;
+    }
+    if (
+      !Date 
+    )
+    {
+      setError("Please pay 75USD for scheduling a meeting");
+      setSuccess("");
+      return;
+
+       
     }
     const { data, error } = await supabase.from("formdetails").insert([
       {
@@ -36,6 +49,7 @@ export default function Example() {
         Email,
         comment,
         Service,
+        Date,
       },
     ]);
     if (error) {
@@ -53,6 +67,7 @@ export default function Example() {
       setEmail("");
       setComment("");
       setService("");
+      setDate("");
 
       return;
     }
@@ -60,7 +75,7 @@ export default function Example() {
 
   return (
     <>
-      <div className="max-[640px]:rounded-none flex lg:w-[700px] md:w-[500px] sm:w-[400px] my-59 mx-auto bg-slate-50 min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 shadow-xl mt-11 mb-11">
+      <div className="max-[640px]:rounded-none flex lg:w-[700px] md:w-[500px]  sm:w-[300px] my-59 mx-auto bg-slate-50 min-h-full sm:mx-[11]flex-1 flex-col justify-center px-6 py-12 lg:px-8 shadow-xl mt-11 mb-11 sm:mx-[11]">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 className="mt-0 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Request a Quote
@@ -85,7 +100,7 @@ export default function Example() {
                   required
                   value={FName}
                   onChange={(e) => setFname(e.target.value)}
-                  className="block lg:w-[400px] w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block lg:w-[400px] w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3"
                 />
               </div>
             </div>
@@ -105,7 +120,7 @@ export default function Example() {
                   required
                   value={Lname}
                   onChange={(e) => setLname(e.target.value)}
-                  className="block lg:w-[400px] w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block lg:w-[400px] w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3"
                 />
               </div>
             </div>
@@ -125,7 +140,7 @@ export default function Example() {
                   required
                   value={number}
                   onChange={(e) => setnumber(e.target.value)}
-                  className="block lg:w-[400px] w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block lg:w-[400px] w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading- px-3"
                 />
               </div>
             </div>
@@ -145,7 +160,7 @@ export default function Example() {
                   required
                   value={Bussiness_Name}
                   onChange={(e) => setBusiness_Name(e.target.value)}
-                  className="block lg:w-[400px] w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block lg:w-[400px] w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading- px-3"
                 />
               </div>
             </div>
@@ -166,7 +181,7 @@ export default function Example() {
                   required
                   value={Email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="block w-full lg:w-[400px] rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full lg:w-[400px] rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3"
                 />
               </div>
             </div>
@@ -175,7 +190,7 @@ export default function Example() {
               <div className="flex items-center justify-between">
                 <label
                   htmlFor="textarea"
-                  className="block text-sm font-medium leading-6 text-gray-900 lg:mt-[-100px]"
+                  className="block text-sm font-medium leading-6 text-gray-900 lg:mt-[-100px] px-3"
                 >
                   Comment <span className="text-red-600">*</span>
                 </label>
@@ -211,11 +226,25 @@ export default function Example() {
                   <option value="Tax & Audit">Tax & Audit</option>
                   <option value="Financial Analysis">Financial Analysis</option>
                   <option value="Managenment Information System">
-                    Managenment Information System
+                    Management Information System
                   </option>
                   <option value="Financial Analysis">Financial Analysis</option>
+                  <option value="BookKeeping /QuickBooks">Bookkeeping/QuickBooks</option>
                 </select>
               </div>
+            </div>
+            <div>
+              <label htmlFor="Date"
+                className="block text-sm font-medium leading-6 text-gray-900">
+               Schedule a Consultancy Meeting 
+              </label>
+              <p className="font-thin py-2"> Enter your Dates range of availability for the consultancy meeting and schedule a meeting for 75 USD within the time span for one time</p>
+             <DatePickerWithRange
+              value={Date}
+              onChange={(e) => setDate(e.target.value)}
+             />
+             
+             
             </div>
 
             <div>
@@ -231,8 +260,9 @@ export default function Example() {
               <div className="text-green-600 text-center">{success}</div>
             )}
           </form>
-        </div>
+        </div> 
       </div>
+      
     </>
   );
 }

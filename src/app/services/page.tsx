@@ -14,7 +14,7 @@ export default function Example() {
           {posts.map((post) => (
             <article
               key={post.id}
-              className="flex max-w-xl flex-col items-start   border-2 rounded-lg rounded-md bg-white px-5"
+              className="flex max-w-xl flex-col items-start border-2 rounded-md bg-white px-5"
             >
               <div className="w-full flex flex-row justify-center items-center mt-4 ">
                 
@@ -30,8 +30,6 @@ export default function Example() {
                 />
               </div>
               </div>
-              
-
               <div className="group relative">
                 <h3 className="mt-3 text-lg font-semibold text-center leading-6 text-gray-900 group-hover:text-[#27978c]">
                   <a href={post.href}>
@@ -44,7 +42,7 @@ export default function Example() {
                 </p>
               </div>
               <div className="mb-10">
-                <Link href="/Form">
+                <Link href="/buynow">
                 <Btn text={"Buy Now"} />
                 </Link>
               </div>
