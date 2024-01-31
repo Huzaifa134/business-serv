@@ -1,20 +1,14 @@
 "use client"
-import React, { Suspense } from "react";
-import Image from "next/image";
-import header from "../../../public/header.jpg";
-import Background from "../../../Background.png";
+import React from "react";
+import mainvideo from "../../../videos/mainvideo.mp4";
+import NextVideo from "next-video";
 import About from "../about/About";
-import Services from "./Services";
-import Btn from "../Btn";
 import GooeyButton from "@/components/gooeybutton";
-import Typewriter from "typewriter-effect";
 import { TypeAnimation } from "react-type-animation";
 import { lusitana } from '@/components/ui/fonts';
 import Servicesection from './Services';
-import {useRouter} from 'next/router';
-import mockRouter from 'next-router-mock';
 import Link from 'next/link';
-
+import {ReactPlayerAsVideo} from './player';
 export default function  Homepage(){
 
  
@@ -81,10 +75,19 @@ export default function  Homepage(){
         </div>
         </div>
         <About />
+        <div className='w-250 h-250 m-10'>
+          <NextVideo 
+          
+          src={mainvideo}
+          autoplay="true"
+          loop="2"
+          controls="false"
+          />
+        </div>
         <div>
-          <Suspense>
+         
             <Servicesection/>
-          </Suspense>
+          
         </div>
 
 
