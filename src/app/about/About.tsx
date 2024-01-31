@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import about from "../../../public/about.png";
+import Link from "next/link";
 import Btn from "../Btn";
 const About = () => {
   return (
@@ -13,14 +14,13 @@ const About = () => {
         <h1 className="font-bold lg:text-3xl md:text-3xl max-[717px]:text-[25px] max-[717px]:tracking-widest max-[717px]:text-center ">
           About Us
         </h1>
-        <p className="lg:text-base md:text-sm sm:text-[15px] max-[717px]:text-center">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. In ex neque
-          nemo, ipsa voluptates blanditiis nam delectus, harum nobis velit optio
-          aliquam, maxime autem? Vitae unde necessitatibus vero nobis minima
-          officiis, iure quisquam
+        <p className="lg:text-base md:text-sm sm:text-[15px] max-[717px]:text-center my-10">
+        Our company is led by a team of Certified Public Accountants with nearly three decades of experience in key areas such as Accounting, Audit, Tax, and Management Consultancy. Learn more about our professional partnership and how it can benefit your business.
         </p>
         <div className="my-10">
-          <Btn text={"Learn More"} />
+          <Link href="/services">
+          <Btn  text={"Learn More"}/>
+        </Link>
         </div>
       </div>
     </div>
