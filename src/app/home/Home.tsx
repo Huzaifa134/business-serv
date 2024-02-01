@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import mainvideo from "../../../videos/mainvideo.mp4";
+import mainvideo from "../../../videos/mainvideo.ogg";
 import NextVideo from "next-video";
 import About from "../about/About";
 import GooeyButton from "@/components/gooeybutton";
