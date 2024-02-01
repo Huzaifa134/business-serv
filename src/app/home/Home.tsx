@@ -8,7 +8,6 @@ import { TypeAnimation } from "react-type-animation";
 import { lusitana } from '@/components/ui/fonts';
 import Servicesection from './Services';
 import Link from 'next/link';
-import {ReactPlayerAsVideo} from './player';
 export default function  Homepage(){
 
  
@@ -66,7 +65,7 @@ export default function  Homepage(){
               repeat={Infinity}
             />
 
-            <Link href="/Form">
+            <Link href="/aboutus">
               <GooeyButton />
             </Link>
             </div>
@@ -79,9 +78,9 @@ export default function  Homepage(){
           <NextVideo 
           
           src={mainvideo}
-          autoplay="true"
-          loop="2"
-          controls="false"
+          autoPlay={true}
+          loop={true}
+          controls={false}
           />
         </div>
         <div>
