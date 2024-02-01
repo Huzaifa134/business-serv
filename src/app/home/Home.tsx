@@ -8,7 +8,7 @@ import { TypeAnimation } from "react-type-animation";
 import { lusitana } from "@/components/ui/fonts";
 import Servicesection from "./Services";
 import Link from "next/link";
-// import {ReactPlayerAsVideo} from './player';
+import { ReactPlayerAsVideo } from "./player";
 export default function Homepage() {
   return (
     <div>
@@ -66,12 +66,7 @@ export default function Homepage() {
       </div>
       <About />
       <div className="w-250 h-250 m-10">
-        <NextVideo
-          src={mainvideo}
-          autoPlay={true}
-          loop={true}
-          controls={false}
-        />
+        <NextVideo src={mainvideo} autoplay="true" loop="2" controls="false" />
       </div>
       <div>
         <Servicesection />
