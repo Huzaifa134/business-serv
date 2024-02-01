@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { DatePickerWithRange } from "@/components/datapicker";
 import supabase from "@/config/supabaseClient";
 import { useState } from "react";
@@ -12,7 +12,7 @@ export default function Example() {
   const [Service, setService] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const [Date,setDate] = useState("");
+  const [Date, setDate] = useState("");
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     // setError("");
@@ -30,15 +30,10 @@ export default function Example() {
       setSuccess("");
       return;
     }
-    if (
-      !Date 
-    )
-    {
+    if (!Date) {
       setError("Please pay 75USD for scheduling a meeting");
       setSuccess("");
       return;
-
-       
     }
     const { data, error } = await supabase.from("formdetails").insert([
       {
@@ -229,22 +224,30 @@ export default function Example() {
                     Management Information System
                   </option>
                   <option value="Financial Analysis">Financial Analysis</option>
-                  <option value="BookKeeping /QuickBooks">Bookkeeping/QuickBooks</option>
+                  <option value="BookKeeping /QuickBooks">
+                    Bookkeeping/QuickBooks
+                  </option>
                 </select>
               </div>
             </div>
             <div>
-              <label htmlFor="Date"
-                className="block text-sm font-medium leading-6 text-gray-900">
-               Schedule a Consultancy Meeting 
+              <label
+                htmlFor="Date"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
+                Schedule a Consultancy Meeting
               </label>
-              <p className="font-thin py-2"> Enter your Dates range of availability for the consultancy meeting and schedule a meeting for 75 USD within the time span for one time</p>
-             <DatePickerWithRange
+              <p className="font-thin py-2">
+                {" "}
+                Enter your Dates range of availability for the consultancy
+                meeting and schedule a meeting for 75 USD within the time span
+                for one time
+              </p>
+              {/* <DatePickerWithRange
               value={Date}
               onChange={(e) => setDate(e.target.value)}
              />
-             
-             
+              */}
             </div>
 
             <div>
@@ -260,9 +263,8 @@ export default function Example() {
               <div className="text-green-600 text-center">{success}</div>
             )}
           </form>
-        </div> 
+        </div>
       </div>
-      
     </>
   );
 }
