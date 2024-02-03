@@ -20,7 +20,7 @@ const About = () => {
         <div className="my-10">
           <Link href="/services">
           <Btn  text={"Learn More"}/>
-        </Link>
+        </Link> 
         </div>
       </div>
     </div>

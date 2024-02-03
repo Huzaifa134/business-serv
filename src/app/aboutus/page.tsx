@@ -11,6 +11,33 @@ export default function AboutUs() {
       <h2 className="mx-10 bold my-10 font-normal text-cyan-600 md:text-2xl max-[700px]:text-[20px] max-[700px]">
         Step-by-Step Guide to Using Our Application:
       </h2>
+ main
+      <p>
+         
+    Throughout your journey with us, we are committed to providing continuous support and guidance. Our team is here to assist you with any queries or challenges you may encounter.
+<li></li>
+         </p>
+         </li>
+   
+  <li className= "mx-20 my-10">
+   <h2 className="font-bold md:text-xl max-[700px]:text-[20px] max-[700px]">Secure Payment Process:</h2>
+ <p>
+ Rest assured that our payment processes are secure, ensuring the confidentiality and safety of your financial transactions.
+ </p>
+    
+</li>
+<li className= "mx-20 my-10">
+<h2 className="font-bold md:text-xl max-[700px]:text-[20px] max-[700px]">Enjoy a Seamless Experience </h2>
+<p>You are using our services for a one-time consultation or an ongoing partnership, we aim to provide you with a seamless and efficient experience tailored to the specific needs of your business.</p>
+</li>
+<p className= "mx-20 my-10">
+Thank you for choosing Pacific Financial Hub. We look forward to assisting you on your business journey!
+ </p></ul>  
+ </div>        
+        </div>
+        
+
+    )
       <div>
         <ul>
           <li className="mx-20 ">
@@ -135,6 +162,7 @@ export default function AboutUs() {
               with any queries or challenges you may encounter.
             </p>
           </li>
+
 
           <li className="mx-20 my-10">
             <h2 className="font-bold md:text-xl max-[700px]:text-[20px] max-[700px]">

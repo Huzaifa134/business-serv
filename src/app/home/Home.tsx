@@ -63,6 +63,45 @@ export default function Homepage() {
             </div>
           </div>
         </div>
+
+        </div>
+        <About />
+    
+          <div className=" flex flex-row mt-10  justify-center ">
+        <video width="1000" controls height="1000"  preload="auto" loop autoPlay muted>
+      <source src='mainvideo.mp4' type="video/mp4" />
+     
+      Your browser does not support the video tag.
+    </video>
+    </div>
+          {/* <NextVideo 
+          
+          src={mainvideo}
+          autoPlay={true}
+          loop={true}
+          controls={false}
+          />
+        </div> */}
+
+        <div>
+         
+            <Servicesection/>
+          
+        </div>
+
+
+    
+     
+    
+  
+       
+    
+  
+
+</div>
+  )
+}
+
       </div>
       <About />
       <div className="w-250 h-250 m-10">
@@ -79,3 +118,4 @@ export default function Homepage() {
     </div>
   );
 }
+
