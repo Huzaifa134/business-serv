@@ -74,7 +74,7 @@ export default function AboutUs() {
       <p>
          
     Throughout your journey with us, we are committed to providing continuous support and guidance. Our team is here to assist you with any queries or challenges you may encounter.
-
+<li></li>
          </p>
          </li>
    

@@ -14,10 +14,7 @@ import {
 
 export type DatePickerWithRangeProps = React.ComponentProps<typeof Calendar>
 export function DatePickerWithRange({
-  className,
-  value,
-  onChange
-}: DatePickerWithRangeProps)
+  className}: DatePickerWithRangeProps)
  {
   const [date, setDate] = React.useState<DateRange | undefined>({
     from: new Date(2022, 0, 20),
