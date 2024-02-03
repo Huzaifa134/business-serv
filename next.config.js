@@ -13,7 +13,7 @@ const nextConfig = {
 
 module.exports = {
     images: {
-      domains: ['images.unsplash.com','https://www.pacificfh.com/'],
+      domains: ['images.unsplash.com','www.pacificfh.com'],
     },
   }
 // next.config.js
