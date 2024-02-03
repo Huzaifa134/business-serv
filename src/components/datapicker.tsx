@@ -13,16 +13,7 @@ import {
 } from "@/components/ui/popover";
 
 export type DatePickerWithRangeProps = React.ComponentProps<typeof Calendar>;
-export function DatePickerWithRange({
-
-  className}: DatePickerWithRangeProps)
- {
-
-  className,
-}: // value,
-// onChange
-DatePickerWithRangeProps) {
-
+export function DatePickerWithRange({ className }: DatePickerWithRangeProps) {
   const [date, setDate] = React.useState<DateRange | undefined>({
     from: new Date(2022, 0, 20),
     to: addDays(new Date(2022, 0, 20), 20),
