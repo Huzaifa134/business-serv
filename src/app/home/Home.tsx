@@ -8,7 +8,6 @@ import { TypeAnimation } from "react-type-animation";
 import { lusitana } from "@/components/ui/fonts";
 import Servicesection from "./Services";
 import Link from "next/link";
-// import { ReactPlayerAsVideo } from "./player";
 export default function Homepage() {
   return (
     <div>
@@ -60,21 +59,31 @@ export default function Homepage() {
             <Link href="/Form">
               <GooeyButton />
             </Link>
+              <Link href="/aboutus">
+                <GooeyButton />
+              </Link>
+
             </div>
           </div>
         </div>
+      </div>
+      <About />
 
-        </div>
-        <About />
-    
-          <div className=" flex flex-row mt-10  justify-center ">
-        <video width="1000" controls height="1000"  preload="auto" loop autoPlay muted>
-      <source src='mainvideo.mp4' type="video/mp4" />
-     
-      Your browser does not support the video tag.
-    </video>
-    </div>
-          {/* <NextVideo 
+      <div className=" flex flex-row mt-10  justify-center ">
+        <video
+          width="1000"
+          controls
+          height="1000"
+          preload="auto"
+          loop
+          autoPlay
+          muted
+        >
+          <source src="mainvideo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      {/* <NextVideo 
           
           src={mainvideo}
           autoPlay={true}
@@ -82,6 +91,7 @@ export default function Homepage() {
           controls={false}
           />
         </div> */}
+
 
         <div>
          
@@ -98,3 +108,10 @@ export default function Homepage() {
 }
 
    
+
+      <div>
+        <Servicesection />
+      </div>
+    </div>
+  );
+}
