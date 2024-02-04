@@ -65,7 +65,7 @@ export default function  Homepage(){
               repeat={Infinity}
             />
 
-            <Link href="/aboutus">
+            <Link href="/Form">
               <GooeyButton />
             </Link>
             </div>
@@ -99,12 +99,7 @@ export default function  Homepage(){
 
 
     
-     
-    
-  
-       
-    
-  
+
 
 </div>
   )

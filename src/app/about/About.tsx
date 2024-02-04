@@ -11,14 +11,14 @@ const About = () => {
         <Image src={about} alt="Header Image" height="600" />
       </div>
       <div className="my-10 lg:w-[500px] md:w-[300px] sm:w-[400px] max-[717px]:w-[400px] max-[717px]:my-5 max-[717px]:flex max-[717px]:flex-col max-[717px]:items-center">
-        <h1 className="font-bold lg:text-3xl md:text-3xl max-[717px]:text-[25px] max-[717px]:tracking-widest max-[717px]:text-center ">
+        <h1 className="font-bold lg:text-2xl md:text-xl max-[717px]:text-[25px] max-[717px]:tracking-widest max-[717px]:text-center ">
           About Us
         </h1>
         <p className="lg:text-base md:text-sm sm:text-[15px] max-[717px]:text-center my-10">
         Our company is led by a team of Certified Public Accountants with nearly three decades of experience in key areas such as Accounting, Audit, Tax, and Management Consultancy. Learn more about our professional partnership and how it can benefit your business.
         </p>
         <div className="my-10">
-          <Link href="/services">
+          <Link href="/aboutus">
           <Btn  text={"Learn More"}/>
         </Link> 
         </div>
