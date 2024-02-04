@@ -50,7 +50,13 @@ const Navbar = () => {
       <header className="flex justify-between px-32 pt-4 bg- items-center bg-[#22D6FD] lg:h-30">
         {/* Left Side */}
         <div>
-          <Image src="/HeroAnime.gif" alt="Logo" width={200} height={100} />
+        <video width="200"  height="100"  preload="auto" loop autoPlay muted>
+      <source src='HeroAnime.mp4' type="video/mp4" />
+     
+      Your browser does not support the video tag.
+    </video>
+          
+          {/* <Image src="/HeroAnime.gif" alt="Logo" width={200} height={100} /> */}
           {/* <h1 className="text-3xl font-bold text-gray-600">Business</h1> */}
         </div>
 
