@@ -41,7 +41,7 @@ export default function Example() {
     return (
       <div className=" py-24 sm:py-32 ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h1 className="text-5xl  font-bold text-center">
+        <h1 className="text-3xl  font-bold text-center">
           Our Services
 
         </h1>

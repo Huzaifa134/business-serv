@@ -73,7 +73,7 @@ export default function Example() {
       <div className="max-[640px]:rounded-none flex lg:w-[700px] md:w-[500px]  sm:w-[300px] my-59 mx-auto bg-slate-50 min-h-full sm:mx-[11]flex-1 flex-col justify-center px-6 py-12 lg:px-8 shadow-xl mt-11 mb-11 sm:mx-[11]">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 className="mt-0 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Request a Quote
+        Consultation Form
           </h2>
         </div>
 

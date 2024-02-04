@@ -56,9 +56,13 @@ export default function Homepage() {
                 repeat={Infinity}
               />
 
+            <Link href="/Form">
+              <GooeyButton />
+            </Link>
               <Link href="/aboutus">
                 <GooeyButton />
               </Link>
+
             </div>
           </div>
         </div>
@@ -87,6 +91,23 @@ export default function Homepage() {
           controls={false}
           />
         </div> */}
+
+
+        <div>
+         
+            <Servicesection/>
+          
+        </div>
+
+
+    
+
+
+</div>
+  )
+}
+
+   
 
       <div>
         <Servicesection />
