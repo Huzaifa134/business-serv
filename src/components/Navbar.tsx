@@ -47,10 +47,10 @@ const Navbar = () => {
   return (
     <>
       {/* Header */}
-      <header className="flex justify-between px-32 pt-4 bg- items-center bg-[#22D6FD] lg:h-30">
+      <header className="flex justify-between  pt-4 bg- items-center bg-[#22D6FD] lg:h-30">
         {/* Left Side */}
         <div>
-        <video width="200"  height="100"  preload="auto" loop autoPlay muted>
+        <video width="300"  height="100"  preload="auto" loop autoPlay muted>
       <source src='HeroAnime.mp4' type="video/mp4" />
      
       Your browser does not support the video tag.
@@ -62,7 +62,7 @@ const Navbar = () => {
 
         {/* Right Side */}
         <nav>
-          <ul className="text-lg font-medium hidden md:flex gap-x-4 text-gray-600">
+          <ul className="text-md font-medium hidden md:flex gap-x-4 text-gray-600 mx-20">
             {navLink.map((name) => (
               <li className="" key={name.id}>
                 <Link
@@ -99,7 +99,7 @@ const Navbar = () => {
                     });
                   }}
                 >
-                  Buy Now
+                  Consultation
                 </button>
               </Link>
             </li>
@@ -151,7 +151,7 @@ const Navbar = () => {
                             });
                           }}
                         >
-                          Buy Now
+                          Consultation
                         </button>
                       </Link>
                     </li>
