@@ -239,15 +239,14 @@ export default function Example() {
               </label>
               <p className="font-thin py-2">
                 {" "}
-                Enter your Dates range of availability for the consultancy
-                meeting and schedule a meeting for 75 USD within the time span
-                for one time
+                 A
+                 one time consulation fee is 50 USD , this is 30 minutes not refundable which will be returned back to you once you sign a contract with us , with one or more of our services
               </p>
               {/* <DatePickerWithRange
-              value={Date}
-              onChange={(e) => setDate(e.target.value)}
-             />
-              */}
+              // value={Date}
+              // onChange={(e) => setDate(e.target.value)} */}
+             {/* /> */}
+             
             </div>
 
             <div>

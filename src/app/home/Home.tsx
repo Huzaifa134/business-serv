@@ -33,14 +33,16 @@ export default function Homepage() {
                   1000,
                   "We can help your business grow ",
                   1000,
-                  "Our Services includes Bookkeeping Cleanup",
-                  1000,
-                  "Our Services includes Cash Flow Optimisation",
-                  1000,
-                  "Our Services includes Efficiency Enhancement",
-                  1000,
-                  "Our Services includes Review and Management",
-                  1000,
+                  "Our Services include Bookkeeping & Reconciliation",
+                  3000,
+                  "Our Services include Cash Flow Optimization",
+                  3000,
+                  "Our Services include Efficiency Enhancement",
+                  3000,
+                  "Our Services include Financial & Business Management Review",
+                  4000,
+                  "We also help to make your Business more attractive to lenders",
+                  2000,
                   "We also help with your Business to take to banks",
                   1000,
                 ]}
@@ -55,13 +57,7 @@ export default function Homepage() {
                 }}
                 repeat={Infinity}
               />
-
-            <Link href="/Form">
-              <GooeyButton />
-            </Link>
-              <Link href="/aboutus">
-                <GooeyButton />
-              </Link>
+  
 
             </div>
           </div>
@@ -97,9 +93,14 @@ export default function Homepage() {
          
             <Servicesection/>
           
-        </div>
+        
+        <div className="flex justify-center pb-24">
+        <Link href="/Form">
+              <GooeyButton />
+            </Link>
+              </div>
 
-
+</div>
     
 
 
@@ -109,9 +110,4 @@ export default function Homepage() {
 
    
 
-      <div>
-        <Servicesection />
-      </div>
-    </div>
-  );
-}
+     
