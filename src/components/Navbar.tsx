@@ -62,7 +62,7 @@ const Navbar = () => {
 
         {/* Right Side */}
         <nav>
-          <ul className="text-md font-medium hidden md:flex gap-x-4 text-gray-600 ">
+          <ul className="text-md font-medium hidden md:flex gap-x-4 text-gray-600 mx-20">
             {navLink.map((name) => (
               <li className="" key={name.id}>
                 <Link
