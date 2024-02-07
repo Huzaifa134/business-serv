@@ -8,13 +8,14 @@ import { TypeAnimation } from "react-type-animation";
 import { lusitana } from "@/components/ui/fonts";
 import Servicesection from "./Services";
 import Link from "next/link";
+// import { ReactPlayerAsVideo } from "./player";
 export default function Homepage() {
   return (
     <div>
       <div
         className={`${lusitana.className}bg-scroll flex justify-center items-center h-screen mb-0 `}
         style={{
-          backgroundImage: `url('/hero.jpg')`,
+          backgroundImage: ` url("/hero.jpg")`,
           height: "800px",
           backgroundPosition: "center",
           backgroundSize: "cover",
@@ -57,7 +58,14 @@ export default function Homepage() {
                 }}
                 repeat={Infinity}
               />
+
   
+
+
+
+              <Link href="/Form">
+                <GooeyButton />
+              </Link>
 
             </div>
           </div>
@@ -89,6 +97,7 @@ export default function Homepage() {
         </div> */}
 
 
+
         <div>
          
             <Servicesection/>
@@ -111,3 +120,11 @@ export default function Homepage() {
    
 
      
+
+      <div>
+        <Servicesection />
+      </div>
+    </div>
+  );
+}
+
