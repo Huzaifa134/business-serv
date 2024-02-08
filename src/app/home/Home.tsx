@@ -59,20 +59,9 @@ export default function Homepage() {
                 repeat={Infinity}
               />
 
-
-  
-
-
-
               {/* <Link href="/Form">
                 <GooeyButton />
               </Link> */}
-
-
-              {/* <Link href="/Form">
-                <GooeyButton />
-              </Link> */}
-
             </div>
           </div>
         </div>
@@ -102,31 +91,6 @@ export default function Homepage() {
           />
         </div> */}
 
-
-
-
-        <div>
-         
-            <Servicesection/>
-          
-        
-        <div className="flex justify-center pb-24">
-        <Link href="/Form">
-              <GooeyButton />
-            </Link>
-              </div>
-
-</div>
-    
-
-
-</div>
-  )
-}
-
-
-
-
       <div>
         <Servicesection />
 
@@ -139,4 +103,3 @@ export default function Homepage() {
     </div>
   );
 }
-
