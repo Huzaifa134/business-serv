@@ -63,9 +63,9 @@ export default function Homepage() {
 
 
 
-              <Link href="/Form">
+              {/* <Link href="/Form">
                 <GooeyButton />
-              </Link>
+              </Link> */}
 
             </div>
           </div>
@@ -117,14 +117,5 @@ export default function Homepage() {
   )
 }
 
-   
 
-     
-
-      <div>
-        <Servicesection />
-      </div>
-    </div>
-  );
-}
 
