@@ -59,8 +59,14 @@ export default function Homepage() {
                 repeat={Infinity}
               />
 
+
   
 
+
+
+              {/* <Link href="/Form">
+                <GooeyButton />
+              </Link> */}
 
 
               {/* <Link href="/Form">
@@ -98,6 +104,7 @@ export default function Homepage() {
 
 
 
+
         <div>
          
             <Servicesection/>
@@ -118,4 +125,18 @@ export default function Homepage() {
 }
 
 
+
+
+      <div>
+        <Servicesection />
+
+        <div className="flex justify-center pb-24">
+          <Link href="/Form">
+            <GooeyButton />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
 
