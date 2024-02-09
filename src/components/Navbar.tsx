@@ -39,7 +39,7 @@ const Navbar = () => {
     },
     {
       name: "About Us",
-      link: "/aboutus",
+      link: "/#about",
       id: 3,
     },
   ];
@@ -50,12 +50,11 @@ const Navbar = () => {
       <header className="flex justify-between  pt-4 bg- items-center bg-[#22D6FD] lg:h-30">
         {/* Left Side */}
         <div>
-        <video width="300"  height="100"  preload="auto" loop autoPlay muted>
-      <source src='HeroAnime.mp4' type="video/mp4" />
-     
-      Your browser does not support the video tag.
-    </video>
-          
+          <video width="300" height="100" preload="auto" loop autoPlay muted>
+            <source src="HeroAnime.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
           {/* <Image src="/HeroAnime.gif" alt="Logo" width={200} height={100} /> */}
           {/* <h1 className="text-3xl font-bold text-gray-600">Business</h1> */}
         </div>
@@ -117,6 +116,8 @@ const Navbar = () => {
                         <Link
                           key={name}
                           href={link}
+                          scroll={true}
+                          style={{ scrollBehavior: "smooth" }}
                           className={` ${
                             pathname === link
                               ? "underline text-black  active:bg-cyan-100"

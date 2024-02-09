@@ -44,7 +44,7 @@ export default function Homepage() {
                   4000,
                   "We also help to make your Business more attractive to lenders",
                   2000,
-                  "We also help with your Business to take to banks",
+                  // "We also help with your Business to take to banks",
                   1000,
                 ]}
                 wrapper="span"
