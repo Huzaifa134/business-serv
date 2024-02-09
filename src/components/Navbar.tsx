@@ -42,6 +42,11 @@ const Navbar = () => {
       link: "/#about",
       id: 3,
     },
+    {
+      name: "Guides",
+      link: "/guide",
+      id: 3,
+    },
   ];
 
   return (
