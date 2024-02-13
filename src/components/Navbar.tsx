@@ -96,7 +96,8 @@ const Navbar = () => {
                     checkout({
                       lineItems: [
                         {
-                          price: "price_1OYuklIuBZT1f6AcnxeEHZP8",
+                          // price: "price_1OYuklIuBZT1f6AcnxeEHZP8",
+                          price: "price_1OjTxQFXkJdR9u6sVDKCDQAL",
                           quantity: 1,
                         },
                       ],
