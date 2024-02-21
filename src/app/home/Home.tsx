@@ -127,16 +127,3 @@ export default function Homepage() {
 
 
 
-      <div>
-        <Servicesection />
-
-        <div className="flex justify-center pb-24">
-          <Link href="/Form">
-            <GooeyButton />
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
-

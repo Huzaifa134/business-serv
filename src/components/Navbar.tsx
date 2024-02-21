@@ -86,7 +86,7 @@ const Navbar = () => {
               <Link href={"/Form"}> Contact Us </Link>
             </li> */}
             <li>
-              <Link href={"/"}>
+              <Link href={"https://buy.stripe.com/dR6aIu14RgK1cJa8wz"}>
                 <button
                   onClick={() => {
                     checkout({
@@ -138,13 +138,13 @@ const Navbar = () => {
                       <Link href={"/Form"}>Contact</Link>
                     </li> */}
                     <li className="py-3">
-                      <Link href={"/"}>
+                      
                         <button
                           onClick={() => {
                             checkout({
                               lineItems: [
                                 {
-                                  price: "price_1OYuklIuBZT1f6AcnxeEHZP8",
+                                  price: "price_1OjTxQFXkJdR9u6sVDKCDQAL",
                                   quantity: 1,
                                 },
                               ],
@@ -153,7 +153,7 @@ const Navbar = () => {
                         >
                           Consultation
                         </button>
-                      </Link>
+                 
                     </li>
                   </ul>
                 </SheetHeader>
