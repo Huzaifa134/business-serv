@@ -14,7 +14,7 @@ import config from '../../../../sanity.config'
 
 
 export default function StudioPage() {
-  console.log('Studio page')
+  console.log('StudioPage')
   return <NextStudio config={config} />
   
 }
