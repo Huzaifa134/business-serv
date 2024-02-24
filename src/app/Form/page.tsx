@@ -3,58 +3,56 @@ import { DatePickerWithRange } from "@/components/datapicker";
 import supabase from "@/config/supabaseClient";
 import { useState } from "react";
 export default function Example() {
-  const [FName, setFname] = useState("");
+  const [Fname, setFname] = useState("");
   const [Lname, setLname] = useState("");
-  const [number, setnumber] = useState("");
-  const [Bussiness_Name, setBusiness_Name] = useState("");
+  const [Number, setnumber] = useState("");
+  const [Business_Name, setBusiness_Name] = useState("");
   const [Email, setEmail] = useState("");
-  const [comment, setComment] = useState("");
+  const [Details, setComment] = useState("");
   const [Service, setService] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const [Date, setDate] = useState("");
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     // setError("");
     if (
-      !FName ||
+      !Fname ||
       !Lname ||
-      !number ||
-      !Bussiness_Name ||
+      !Number ||
+      !Business_Name ||
       !Email ||
-      !comment ||
-      !Service ||
-      !Date
+      !Details ||
+      !Service
     ) {
       setError("Please fill all the fields");
       setSuccess("");
       return;
     }
-    if (!Date) {
-      setError("Please pay 75USD for scheduling a meeting");
-      setSuccess("");
-      return;
-    }
-    const { data, error } = await supabase.from("formdetails").insert([
+    // if (!Date) {
+    //   setError("Please pay 75USD for scheduling a meeting");
+    //   setSuccess("");
+    //   return;
+    // }
+    const { data, error } = await supabase.from("Consultation").insert([
       {
-        FName,
+        Fname,
         Lname,
-        number,
-        Bussiness_Name,
+        Number,
+        Business_Name,
         Email,
-        comment,
+        Details,
         Service,
-        Date,
       },
     ]);
+    console.log(data, error);
     if (error) {
       setError(error.message);
       return;
     } else {
       console.log("Data", data);
-      alert("Thank you for your response");
+      // alert("Thank you for your response");
       setSuccess("Thank you for your response");
-      setError("");
+      // setError("");
       setFname("");
       setLname("");
       setnumber("");
@@ -62,7 +60,6 @@ export default function Example() {
       setEmail("");
       setComment("");
       setService("");
-      setDate("");
 
       return;
     }
@@ -73,10 +70,9 @@ export default function Example() {
       <div className="max-[640px]:rounded-none flex lg:w-[700px] md:w-[500px]  sm:w-[300px] my-59 mx-auto bg-slate-50 min-h-full sm:mx-[11]flex-1 flex-col justify-center px-6 py-12 lg:px-8 shadow-xl mt-11 mb-11 sm:mx-[11]">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 className="mt-0 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-        Consultation Form
+            Consultation Form
           </h2>
         </div>
-
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form className="space-y-6 " onSubmit={handleSubmit}>
             <div className="flex flex-column content-center gap-x-5 flex-wrap">
@@ -93,7 +89,7 @@ export default function Example() {
                   type="text"
                   autoComplete="text"
                   required
-                  value={FName}
+                  value={Fname}
                   onChange={(e) => setFname(e.target.value)}
                   className="block lg:w-[400px] w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3"
                 />
@@ -133,7 +129,7 @@ export default function Example() {
                   type="number"
                   autoComplete="text"
                   required
-                  value={number}
+                  value={Number}
                   onChange={(e) => setnumber(e.target.value)}
                   className="block lg:w-[400px] w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading- px-3"
                 />
@@ -153,7 +149,7 @@ export default function Example() {
                   type="text"
                   autoComplete="text"
                   required
-                  value={Bussiness_Name}
+                  value={Business_Name}
                   onChange={(e) => setBusiness_Name(e.target.value)}
                   className="block lg:w-[400px] w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading- px-3"
                 />
@@ -197,7 +193,7 @@ export default function Example() {
                   cols={30}
                   rows={5}
                   required
-                  value={comment}
+                  value={Details}
                   onChange={(e) => setComment(e.target.value)}
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 ></textarea>
@@ -239,14 +235,14 @@ export default function Example() {
               </label>
               <p className="font-thin py-2">
                 {" "}
-                 A
-                 one time consulation fee is 50 USD , this is 30 minutes not refundable which will be returned back to you once you sign a contract with us , with one or more of our services
+                A one time consulation fee is 50 USD , this is 30 minutes not
+                refundable which will be returned back to you once you sign a
+                contract with us , with one or more of our services
               </p>
               {/* <DatePickerWithRange
               // value={Date}
               // onChange={(e) => setDate(e.target.value)} */}
-             {/* /> */}
-             
+              {/* /> */}
             </div>
 
             <div>
@@ -257,11 +253,11 @@ export default function Example() {
                 Send
               </button>
             </div>
-            {error && <div className="text-red-600 text-center">{error}</div>}
-            {success && (
-              <div className="text-green-600 text-center">{success}</div>
-            )}
           </form>
+          {error && <div className="text-red-600 text-center">{error}</div>}
+          {success && (
+            <div className="text-green-600 text-center">{success}</div>
+          )}
         </div>
       </div>
     </>
