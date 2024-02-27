@@ -47,6 +47,16 @@ const Navbar = () => {
       link: "/guide",
       id: 3,
     },
+    {
+      name: "Privacy Policy",
+      link: "/privacypolicy",
+      id: 4,
+    },
+    {
+      name: "Terms & Conditions",
+      link: "/termsandcond",
+      id: 5,
+    },
   ];
 
   return (

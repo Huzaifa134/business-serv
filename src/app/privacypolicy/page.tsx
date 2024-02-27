@@ -1,15 +1,14 @@
-import Link from "next/link";
 import React from "react";
 import { client } from "../../../sanity/lib/client";
 import { PortableText } from "@portabletext/react";
 
 async function getData() {
-  const fetchData = await client.fetch(`*[_type=='aboutus']`);
+  const fetchData = await client.fetch(`*[_type=='privacy']`);
 
   return fetchData;
 }
 
-export default async function AboutUs() {
+const PrivacyPolicy = async () => {
   const data = await getData();
   return (
     <div className="flex flex-col mx-20 px-5">
@@ -30,4 +29,6 @@ export default async function AboutUs() {
       ))}
     </div>
   );
-}
+};
+
+export default PrivacyPolicy;
