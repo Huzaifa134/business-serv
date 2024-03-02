@@ -86,7 +86,7 @@ const Navbar = () => {
               <Link href={"/Form"}> Contact Us </Link>
             </li> */}
             <li>
-              <Link href={"https://buy.stripe.com/dR6aIu14RgK1cJa8wz"}>
+              <Link href={"https://buy.stripe.com/00g03QcNzeBTeRi28c"}>
                 <button
                   onClick={() => {
                     checkout({
@@ -153,6 +153,7 @@ const Navbar = () => {
                         >
                           Consultation
                         </button>
+                        
                  
                     </li>
                   </ul>
