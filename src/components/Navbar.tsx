@@ -39,23 +39,8 @@ const Navbar = () => {
     },
     {
       name: "About Us",
-      link: "/#about",
+      link: "/aboutus",
       id: 3,
-    },
-    {
-      name: "Guides",
-      link: "/guide",
-      id: 3,
-    },
-    {
-      name: "Privacy Policy",
-      link: "/privacypolicy",
-      id: 4,
-    },
-    {
-      name: "Terms & Conditions",
-      link: "/termsandcond",
-      id: 5,
     },
   ];
 
@@ -100,14 +85,13 @@ const Navbar = () => {
               <Link href={"/Form"}> Contact Us </Link>
             </li> */}
             <li>
-              <Link href={"/"}>
+              <Link href={"https://buy.stripe.com/00g03QcNzeBTeRi28c"}>
                 <button
                   onClick={() => {
                     checkout({
                       lineItems: [
                         {
-                          // price: "price_1OYuklIuBZT1f6AcnxeEHZP8",
-                          price: "price_1OjTxQFXkJdR9u6sVDKCDQAL",
+                          price: "price_1OYuklIuBZT1f6AcnxeEHZP8",
                           quantity: 1,
                         },
                       ],
@@ -132,8 +116,6 @@ const Navbar = () => {
                         <Link
                           key={name}
                           href={link}
-                          scroll={true}
-                          style={{ scrollBehavior: "smooth" }}
                           className={` ${
                             pathname === link
                               ? "underline text-black  active:bg-cyan-100"
@@ -155,22 +137,20 @@ const Navbar = () => {
                       <Link href={"/Form"}>Contact</Link>
                     </li> */}
                     <li className="py-3">
-                      <Link href={"/"}>
-                        <button
-                          onClick={() => {
-                            checkout({
-                              lineItems: [
-                                {
-                                  price: "price_1OYuklIuBZT1f6AcnxeEHZP8",
-                                  quantity: 1,
-                                },
-                              ],
-                            });
-                          }}
-                        >
-                          Consultation
-                        </button>
-                      </Link>
+                      <button
+                        onClick={() => {
+                          checkout({
+                            lineItems: [
+                              {
+                                price: "price_1OjTxQFXkJdR9u6sVDKCDQAL",
+                                quantity: 1,
+                              },
+                            ],
+                          });
+                        }}
+                      >
+                        Consultation
+                      </button>
                     </li>
                   </ul>
                 </SheetHeader>
