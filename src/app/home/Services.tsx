@@ -5,6 +5,7 @@ import graph from "../../../public/graph.svg";
 import { client } from "@/lib/SanityClient";
 import { PortableText } from "@portabletext/react";
 import imageUrlBuilder from "@sanity/image-url";
+import Link from "next/link";
 
 async function getData() {
   const fetchData = await client.fetch(`*[_type=='service']`);
@@ -72,10 +73,10 @@ export default async function Example() {
 
               <div className="group relative">
                 <h3 className="mt-3 text-lg font-semibold text-center leading-6 text-gray-900 group-hover:text-[#27978c]">
-                  <a>
+                  <Link href="/services">
                     <span className="absolute inset-0" />
                     {data?.title}
-                  </a>
+                  </Link>
                 </h3>
                 <div className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600 mb-5">
                   <PortableText value={data?.description} />

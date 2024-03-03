@@ -5,6 +5,7 @@ import Btn from "../Btn";
 import { client } from "@/lib/SanityClient";
 import { PortableText } from "@portabletext/react";
 import imageUrlBuilder from "@sanity/image-url";
+import Link from "next/link";
 
 export default function Example() {
   const [services, setServices] = useState([]);
@@ -58,7 +59,9 @@ export default function Example() {
                 </div>
               </div>
               <div className="mb-10">
-                <Btn text={"Learn More"} />
+                <Link href="/Form">
+                  <Btn text={"Learn More"} />
+                </Link>
               </div>
             </article>
           ))}

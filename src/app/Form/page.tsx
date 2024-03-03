@@ -1,7 +1,8 @@
 "use client";
 import { DatePickerWithRange } from "@/components/datapicker";
 import supabase from "@/config/supabaseClient";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { client } from "@/lib/SanityClient";
 export default function Example() {
   const [Fname, setFname] = useState("");
   const [Lname, setLname] = useState("");
@@ -75,6 +76,20 @@ export default function Example() {
       setError((error as Error).message || "An error occurred");
     }
   };
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const data = await client.fetch(`*[_type=='service']`);
+        setServices(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -224,16 +239,20 @@ export default function Example() {
                   onChange={(e) => setService(e.target.value)}
                   className="w-40 border-2 rounded lg:ml-5 border-teal-500 focus:border-teal-500 active:border-teal-500"
                 >
-                  <option value="Accounting">Accounting</option>
-                  <option value="Tax & Audit">Tax & Audit</option>
-                  <option value="Financial Analysis">Financial Analysis</option>
-                  <option value="Managenment Information System">
-                    Management Information System
-                  </option>
-                  <option value="Financial Analysis">Financial Analysis</option>
-                  <option value="BookKeeping /QuickBooks">
-                    Bookkeeping/QuickBooks
-                  </option>
+                  {services.map((data: any, i: number) => (
+                    <option value={data.title} key={i}>
+                      {data.title}
+                    </option>
+                    // <option value="Tax & Audit">Tax & Audit</option>
+                    // <option value="Financial Analysis">Financial Analysis</option>
+                    // <option value="Managenment Information System">
+                    //   Management Information System
+                    // </option>
+                    // <option value="Financial Analysis">Financial Analysis</option>
+                    // <option value="BookKeeping /QuickBooks">
+                    //   Bookkeeping/QuickBooks
+                    // </option>
+                  ))}
                 </select>
               </div>
             </div>
