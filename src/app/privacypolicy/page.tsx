@@ -1,15 +1,30 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import { client } from "../../../sanity/lib/client";
 import { PortableText } from "@portabletext/react";
 
-async function getData() {
-  const fetchData = await client.fetch(`*[_type=='privacy']`);
+// async function getData() {
+//   const fetchData = await client.fetch(`*[_type=='privacy']`);
 
-  return fetchData;
-}
+//   return fetchData;
+// }
 
-const PrivacyPolicy = async () => {
-  const data = await getData();
+const PrivacyPolicy = () => {
+  // const data = await getData();
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const data = await client.fetch(`*[_type=='privacy']`);
+        setData(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchData();
+  }, []);
   return (
     <div className="flex flex-col mx-20 px-5">
       {data?.map((data: any, i: number) => (

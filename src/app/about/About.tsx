@@ -4,10 +4,10 @@ import Image from "next/image";
 import Logo from "../../../public/Logo.jpg";
 import Link from "next/link";
 import Btn from "../Btn";
-import about from "../../../public/about.jpg";
+import about from "../../../public/about.svg";
 const About = () => {
   return (
-    <div className=" bg-[00eff3f8] mt-0" id="about">
+    <div className=" bg-[white] mt-0" id="about">
       <div className="flex items-center w-full justify-center md:my-0 sm:my-10 max-[717px]:my-10 lg:gap-x-60 md:gap-x-10 flex-row md:px-20 max-[717px]:gap-x-5 max-[717px]:flex-col">
         <div className="relative mt-[20px] lg:w-[400px] lg:h-[400px] md:w-[300px] md:h-[300px] max-[717px]:w-[300px] max-[717px]:h-[300px]">
           {/* <Image src={about} alt="Header Image" height="800" width="500" /> */}
