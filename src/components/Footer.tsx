@@ -52,33 +52,33 @@ const Footer = () => {
                   <li>
                     <a
                       className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://www.creative-tim.com/presentation?ref=njs-profile"
+                      href="/guide"
                     >
-                      About Us
+                      Guide
                     </a>
                   </li>
                   <li>
                     <a
                       className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://blog.creative-tim.com?ref=njs-profile"
+                      href="/privacypolicy"
                     >
-                      Consultation Form{" "}
+                      Privacy Policy{" "}
                     </a>
                   </li>
                   <li>
                     <a
                       className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://www.github.com/creativetimofficial?ref=njs-profile"
+                      href="/termsandcond"
                     >
-                      Services
+                      Terms & Condition
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a
                       className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                       href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile"
                     ></a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               <div className="w-full lg:w-4/12 px-4">
