@@ -12,6 +12,8 @@ export default function Example() {
   const [Service, setService] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [Date, setDate] = useState("");
+  const [Time, setTime] = useState("");
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     // setError("");
@@ -42,6 +44,8 @@ export default function Example() {
         Email,
         Details,
         Service,
+        Date,
+        Time,
       },
     ]);
     console.log(data, error);
@@ -52,6 +56,7 @@ export default function Example() {
       console.log("Data", data);
       // alert("Thank you for your response");
       setSuccess("Thank you for your response");
+      setError("");
       // setError("");
       setFname("");
       setLname("");
@@ -60,6 +65,8 @@ export default function Example() {
       setEmail("");
       setComment("");
       setService("");
+      setDate("");
+      setTime("");
 
       return;
     }
@@ -240,9 +247,21 @@ export default function Example() {
                 contract with us , with one or more of our services
               </p>
               {/* <DatePickerWithRange
-              // value={Date}
-              // onChange={(e) => setDate(e.target.value)} */}
-              {/* /> */}
+               value={Date}
+              onChange={(e) => setDate(e.target.value)}
+              /> */}
+              <input
+                type="date"
+                name="date"
+                id="time"
+                onChange={(e) => setDate(e.target.value)}
+              />
+              <input
+                type="time"
+                name="time"
+                id="time"
+                onChange={(e) => setTime(e.target.value)}
+              />
             </div>
 
             <div>
