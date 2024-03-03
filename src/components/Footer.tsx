@@ -45,8 +45,8 @@ const Footer = () => {
           <div className="w-full lg:w-6/12 px-4">
             <div className="flex flex-wrap items-top mb-6">
               <div className="w-full lg:w-4/12 px-4 ml-auto">
-                <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
-                  Useful Links
+                <span className="block uppercase text-blueGray-500 text-xl font-semibold mb-2">
+                  <strong>Useful Links</strong>
                 </span>
                 <ul className="list-unstyled">
                   <li>
@@ -82,11 +82,11 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="w-full lg:w-4/12 px-4">
-                <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
+                <span className="block uppercase text-blueGray-500 text-xl font-semibold mb-2">
                   <strong>Contact Us</strong>
                 </span>
                 <ul className="list-unstyled">
-                  <li>toll free 1-866-218-5377</li>
+                  <li>Toll Free 1-866-218-5377</li>
                   <li>(281) 607-2030</li>
                   <li>
                     <span className="text-bold">

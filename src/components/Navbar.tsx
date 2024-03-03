@@ -108,7 +108,7 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <div className="flex md:hidden">
+          <div className="flex md:hidden pr-10">
             <Sheet>
               <SheetTrigger>
                 <Menu />
@@ -125,7 +125,7 @@ const Navbar = () => {
                             pathname === link
                               ? "underline text-black  active:bg-cyan-100"
                               : "bg-orange "
-                          } hover:bg-slate-600`}
+                          } `}
                         >
                           {" "}
                           {name}{" "}
