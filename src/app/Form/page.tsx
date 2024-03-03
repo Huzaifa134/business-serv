@@ -14,9 +14,10 @@ export default function Example() {
   const [success, setSuccess] = useState("");
   const [Date, setDate] = useState("");
   const [Time, setTime] = useState("");
-  const handleSubmit = async (e: any) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // setError("");
+
     if (
       !Fname ||
       !Lname ||
@@ -30,34 +31,28 @@ export default function Example() {
       setSuccess("");
       return;
     }
-    // if (!Date) {
-    //   setError("Please pay 75USD for scheduling a meeting");
-    //   setSuccess("");
-    //   return;
-    // }
-    const { data, error } = await supabase.from("Consultation").insert([
-      {
-        Fname,
-        Lname,
-        Number,
-        Business_Name,
-        Email,
-        Details,
-        Service,
-        Date,
-        Time,
-      },
-    ]);
-    console.log(data, error);
-    if (error) {
-      setError(error.message);
-      return;
-    } else {
-      console.log("Data", data);
-      // alert("Thank you for your response");
+
+    try {
+      const { data, error } = await supabase.from("Consultation").insert([
+        {
+          Fname,
+          Lname,
+          Number,
+          Business_Name,
+          Email,
+          Details,
+          Service,
+          Date,
+          Time,
+        },
+      ]);
+
+      if (error) {
+        throw new Error(error.message);
+      }
+
       setSuccess("Thank you for your response");
       setError("");
-      // setError("");
       setFname("");
       setLname("");
       setnumber("");
@@ -67,8 +62,8 @@ export default function Example() {
       setService("");
       setDate("");
       setTime("");
-
-      return;
+    } catch (error) {
+      setError((error as Error).message || "An error occurred");
     }
   };
 
