@@ -33,6 +33,15 @@ export default function Example() {
     }
 
     try {
+      let dateValue: string | null = Date;
+      let timeValue: string | null = Time;
+      // Check if the date is empty
+      if (!dateValue) {
+        dateValue = null; // Set dateValue to null if empty
+      }
+      if (!timeValue) {
+        timeValue = null; // Set timeValue to null if empty
+      }
       const { data, error } = await supabase.from("Consultation").insert([
         {
           Fname,
@@ -42,8 +51,8 @@ export default function Example() {
           Email,
           Details,
           Service,
-          Date,
-          Time,
+          Date: dateValue,
+          Time: timeValue,
         },
       ]);
 
