@@ -83,32 +83,24 @@ const Footer = () => {
               </div>
               <div className="w-full lg:w-4/12 px-4">
                 <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
-                  Contact Us
+                  <strong>Contact Us</strong>
                 </span>
                 <ul className="list-unstyled">
+                  <li>toll free 1-866-218-5377</li>
+                  <li>(281) 607-2030</li>
                   <li>
-                    <a
-                      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
-                    ></a>
+                    <span className="text-bold">
+                      <strong>Address:</strong>
+                    </span>{" "}
+                    <br />
+                    Pacific financial Hub Houston Texas
                   </li>
                   <li>
-                    <a
-                      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/terms?ref=njs-profile"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/privacy?ref=njs-profile"
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/contact-us?ref=njs-profile"
-                    ></a>
+                    {" "}
+                    <span>
+                      <strong> Rep one phone:</strong>
+                    </span>{" "}
+                    <br /> 832-263-7572
                   </li>
                 </ul>
               </div>

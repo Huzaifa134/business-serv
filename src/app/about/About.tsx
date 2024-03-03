@@ -4,7 +4,7 @@ import Image from "next/image";
 import Logo from "../../../public/Logo.jpg";
 import Link from "next/link";
 import Btn from "../Btn";
-import about from "../../../public/about.png";
+import about from "../../../public/about.jpg";
 const About = () => {
   return (
     <div className=" bg-[00eff3f8] mt-0" id="about">
