@@ -89,7 +89,7 @@ const Navbar = () => {
             <li>
               <Link href={"/Form"}> Contact Us </Link>
             </li> */}
-            <li>
+            {/* <li>
               <Link href={"https://buy.stripe.com/00g03QcNzeBTeRi28c"}>
                 <button
                   onClick={() => {
@@ -106,7 +106,7 @@ const Navbar = () => {
                   Consultation
                 </button>
               </Link>
-            </li>
+            </li> */}
           </ul>
           <div className="flex md:hidden pr-10">
             <Sheet>
